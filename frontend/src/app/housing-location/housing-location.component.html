@@ -10,4 +10,5 @@
     <img src="/placeholder.png" alt="" class="icon" />
     {{ housingLocation().city }}, {{ housingLocation().state }}
   </p>
+  <a [routerLink]="['/details', housingLocation().id]" style="color: #46236e;">Learn More</a>
 </section>
