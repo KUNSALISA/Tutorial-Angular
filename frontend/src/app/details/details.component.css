@@ -100,10 +100,12 @@ article {
   color: #7700ff;
 }
 
-.listing-location::before {
-  content: url('/assets/location-pin.svg');
-  margin-right: 8px;
+.icon {
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 12px;
 }
 
 .listing-location {

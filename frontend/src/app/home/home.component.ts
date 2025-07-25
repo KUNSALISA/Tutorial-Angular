@@ -15,16 +15,22 @@ export class HomeComponent {
   filteredLocationList: HousingLocationInfo[] = [];
 
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.filteredLocationList = this.housingLocationList;
+    this.housingService
+      .getAllHousingLocations()
+      .then((housingLocationList: HousingLocationInfo[]) => {
+        this.housingLocationList = housingLocationList;
+        this.filteredLocationList = housingLocationList;
+      });
   }
+  
   filterResults(text: string) {
     if (!text) {
-      this.filteredLocationList = this.housingLocationList;  // filteredLocationList = housingLocationList
+      this.filteredLocationList = this.housingLocationList; // filteredLocationList = housingLocationList
       return;
     }
-    this.filteredLocationList = this.housingLocationList.filter((housingLocation) =>
-      housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
+    this.filteredLocationList = this.housingLocationList.filter(
+      (housingLocation) =>
+        housingLocation?.city.toLowerCase().includes(text.toLowerCase())
     );
   }
 }
