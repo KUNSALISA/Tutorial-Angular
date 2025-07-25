@@ -2,9 +2,10 @@
   background: var(--accent-color);
   border-radius: 30px;
   padding-bottom: 30px;
+  border: 1px solid #ac93c8;
 }
 .listing-heading {
-  color: var(--primary-color);
+  color: #7700ff;
   padding: 10px 20px 0 20px;
 }
 .listing-photo {
@@ -14,10 +15,15 @@
   border-radius: 30px 30px 0 0;
 }
 .listing-location {
+  color: #7802ff;
   padding: 10px 20px 20px 20px;
 }
-.listing-location::before {
-  content: url("/placeholder.png") / "";
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 12px;
 }
 section.listing a {
   padding-left: 20px;
