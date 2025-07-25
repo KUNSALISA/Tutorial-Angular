@@ -1,0 +1,192 @@
+/* .listing-photo {
+  height: 600px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 30px;
+  float: right;
+}
+.listing-heading {
+  font-size: 48pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.listing-location::before {
+  content: url('/assets/location-pin.svg') / '';
+}
+.listing-location {
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+.listing-features > .section-heading {
+  color: var(--secondary-color);
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+.listing-features {
+  margin-bottom: 20px;
+}
+.listing-features li {
+  font-size: 14pt;
+}
+li {
+  list-style-type: none;
+}
+.listing-apply .section-heading {
+  font-size: 18pt;
+  margin-bottom: 15px;
+}
+label, input {
+  display: block;
+}
+label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+input {
+  font-size: 16pt;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 400px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid .3px;
+}
+@media (max-width: 1024px) {
+  .listing-photo {
+    width: 100%;
+    height: 400px;
+  }
+} */
+
+/* ปรับปรุงโครงสร้างของ article ให้จัดระเบียบมากขึ้น */
+article {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* รูปภาพ */
+.listing-photo {
+  height: 600px;
+  width: 48%;
+  object-fit: cover;
+  border-radius: 20px;
+  float: right;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ส่วนคำอธิบาย */
+.listing-description {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.listing-heading {
+  font-size: 42pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #7700ff;
+}
+
+.listing-location::before {
+  content: url('/assets/location-pin.svg');
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.listing-location {
+  font-size: 20pt;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Section หัวข้อคุณสมบัติ */
+.listing-features {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.section-heading {
+  color: var(--secondary-color, #693a9e); /* fallback color */
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+
+.listing-features li {
+  font-size: 16pt;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.listing-features li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: green;
+  font-size: 16pt;
+}
+
+/* ฟอร์มสมัคร (ถ้ามี) */
+.listing-apply {
+  margin-top: 40px;
+}
+
+.listing-apply .section-heading {
+  font-size: 20pt;
+  margin-bottom: 20px;
+}
+
+/* ปรับ input ให้น่าใช้งาน */
+label, input {
+  display: block;
+}
+
+label {
+  color: var(--secondary-color, #2a7f62);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+input {
+  font-size: 16pt;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: var(--secondary-color, #2a7f62);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .listing-photo {
+    width: 100%;
+    height: 400px;
+  }
+
+  .listing-description {
+    width: 100%;
+  }
+}
